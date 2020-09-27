@@ -9,8 +9,8 @@ namespace DomainDrivenDesignHelper.Domain
 
         protected IntegrationEvent()
         {
-            this.Id = Guid.NewGuid();
-            this.OccuredOn = DateTimeOffset.Now;
+            Id = Guid.NewGuid();
+            OccuredOn = DateTimeOffset.Now;
         }
     }
 }

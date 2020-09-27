@@ -39,9 +39,9 @@ namespace DomainDrivenDesignHelper.Domain
             if (ReferenceEquals(other, null))
                 return false;
 
-            //            // this might cause problems with libraries that make proxy classes over the real type
-            //            if (this.GetType() != other.GetType())
-            //                return false;
+            //  this might cause problems with libraries that make proxy classes over the real type
+            //  if (this.GetType() != other.GetType())
+            //  return false;
 
             if (ReferenceEquals(this, other))
                 return true;

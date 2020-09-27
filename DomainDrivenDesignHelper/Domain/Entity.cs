@@ -18,7 +18,7 @@ namespace DomainDrivenDesignHelper.Domain
             if(Equals(id, default))
                 throw  new ArgumentException("The ID value cannot be the type's default value." , nameof(id));
 
-            this.Id = id;
+            Id = id;
         }
 
         // EF Core requires an empty constructor
@@ -47,7 +47,7 @@ namespace DomainDrivenDesignHelper.Domain
         {
             if (!(obj is Entity<T> other)) return false;
             
-            return ReferenceEquals(this, other) || this.Id.Equals(other.Id);
+            return ReferenceEquals(this, other) || Id.Equals(other.Id);
             
             
 //            // this might cause problems with libraries that make proxy classes over the real type
@@ -57,7 +57,7 @@ namespace DomainDrivenDesignHelper.Domain
 
         public override int GetHashCode()
         {
-            return this.Id.GetHashCode();
+            return Id.GetHashCode();
         }
 
         public static bool operator ==(Entity<T> left, Entity<T> right)
